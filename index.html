@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Pedidos Aventureiros</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main>
+    <h1>Pedidos</h1>
+    <div id="products" class="products">
+    </div>
+
+    <div class="control">
+      <button class="btn btn-danger" onclick="resetQuantities()">Novo Pedido</button>
+      <button class="btn btn-primary" onclick="loadState()">Restaurar ultimo pedido</button>
+      <button class="btn btn-success" id="show-modal" onclick="showPaymentModal()" disabled="disabled">Fechar
+        pedido</button>
+    </div>
+
+  </main>
+
+  <div id="payment-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-pedidos">
+        <h2>Pedido</h2>
+        <ul id="pedido-list">
+        </ul>
+      </div>
+      <img id="qrcode" />
+      <p id="modal-total"></p>
+      <div class="modal-buttons">
+        <button class="btn btn-primary" onclick="closePaymentModal()">Fechar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/faz-um-pix@2.0.2/lib/browser/faz-um-pix.min.js"></script>
+  <script src="script.js" />
+</body>
+
+</html>
